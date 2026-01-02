@@ -11,8 +11,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v5
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          lfs: false
+          persist-credentials: false
 
       - name: Install Nix
         uses: cachix/install-nix-action@v31
